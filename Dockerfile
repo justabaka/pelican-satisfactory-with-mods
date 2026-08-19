@@ -11,4 +11,4 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 
 USER container
 ADD entrypoint.sh install-mods.sh /
-
+RUN chmod 0755 /{entrypoint,install-mods}.sh
