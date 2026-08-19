@@ -9,6 +9,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get install --no-install-recommends -y jq \
 	&& rm -fR /var/lib/apt/lists/*
 
-USER container
 ADD entrypoint.sh install-mods.sh /
 RUN chmod 0755 /entrypoint.sh /install-mods.sh
+
+USER container
