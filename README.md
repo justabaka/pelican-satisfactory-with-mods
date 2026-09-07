@@ -9,8 +9,8 @@ It is possible to import mods from [Satisfactory Mod Manager](https://docs.ficsi
 1. Replace the docker image in the Egg specification with `ghcr.io/justabaka/pelican-satisfactory-with-mods:latest`.
    Note: you still need to make changes to existing servers.
 2. Add a `ENABLE_MODS` boolean and set it to 1 (mods enabled). If it is set to 0, it will switch the game to vanilla state. Both actions are fully reversible.
-3. Restart the server. A `Ficsit` directory will be created in the server files.
-4. Upload your SMM profile to the `Ficsit` directory as file named `smm.json` in order for the script to be able to convert it to ficsit-cli's format. `smm.json` will be deleted automatically after conversion.
+3. Restart the server. A `Ficsit` directory will be created in the server files. If you already have a `profiles.json` file, you may copy it to the `Ficsit` directory, just make sure that the profile is named `Default` as it's hardcoded so far.
+4. [OPTIONAL] Upload your SMM profile to the `Ficsit` directory as file named `smm.json` in order for the script to be able to convert it to ficsit-cli's format. `smm.json` will be deleted automatically after conversion.
 5. You're done! On next reboot mods will be installed automatically.
 
 ### Custom egg
