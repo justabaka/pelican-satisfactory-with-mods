@@ -29,7 +29,7 @@ if [[ "${ENABLE_MODS}" -eq 1 ]]; then
 	fi
 	
 	if [[ -f "${FICSIT_DIR}/smm.json" ]]; then
-		echo -e "\nConverting SMM mods profile into ficsit-cli format..."
+		echo -e "\n'${FICSIT_DIR}/smm.json' detected, converting SMM mods profile into ficsit-cli format..."
 		jq '{
   profiles: {
     Default: {
@@ -42,13 +42,14 @@ if [[ "${ENABLE_MODS}" -eq 1 ]]; then
   version: 0
 }' ${FICSIT_DIR}/smm.json > ${FICSIT_DIR}/profiles.json
 
-		rm ${FICSIT_DIR}/smm.json
-		echo "Mod profile has been successfully imported from '${FICSIT_DIR}/smm.json', deleting the source file..."
+		echo "Mod profile has been successfully imported from '${FICSIT_DIR}/smm.json', attempting to dele the source file..."
+		rm -f ${FICSIT_DIR}/smm.json
 		echo "Only reupload '${FICSIT_DIR}/smm.json' if you actually changed something (e.g. added/removed a mod)."
 	else
-		echo "SMM profile 'Ficsit/smm.json' is not present."
-		echo "If you need to import the profile from SMM, please export your profile as 'smm.json' then upload it to the 'Ficsit' directory via the 'Files' panel or SFTP."
-		echo "If you do not need this, feel free to ignore this message."
+		echo "[OPTIONAL] SMM profile '${FICSIT_DIR}/smm.json' is not present."
+		echo "[OPTIONAL] If you need to import the profile from SMM, please export your profile as 'smm.json' then upload it to the 'Ficsit' directory via the 'Files' panel or SFTP."
+		echo -e "\n[OPTIONAL] In case you already have a 'profiles.json' file, you may copy it to the '${FICSIT_DIR}' directory and restart the game server. Make sure that the profile is named 'Default' in 'profiles.json'."
+		echo "[OPTIONAL] Copying lock files is not required. Lock files will be deleted at every server launch during the mod update attempt."
 
 		echo -e "\nEnabling mods..."
 		${FICSIT_DIR}/ficsit installation set-vanilla ${GAME_DIR} --off ${FICSIT_FLAGS}
