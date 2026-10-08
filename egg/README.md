@@ -189,12 +189,13 @@ This egg performs automatic mod management using [ficsit-cli](https://github.com
 
 It is possible to import a mod profile from [Satisfactory Mod Manager (SMM)](https://ficsit.app/). In order to do that you should export your mod profile using SMM, rename the resulting .smmprofile file to `smm.json` (important!) and upload it to the `Ficsit` directory via the 'Files' panel or SFTP. The import process is automatic and generally does not require any additional steps or configuration.
 
+It is also possible to use a custom `profiles.json`, e.g. copied from another server. Copying `installations.json` is not necessary, as it's managed automatically.
+Please note that ficsit-cli's lock files will be deleted on every mod update attempt due to ficsit-cli limitations. It is a normal behaviour which does not affect anything.
+
 > [!NOTE]
 > - In order for the `smm.json` import to work, mod management should be enabled.
 > - Mod profile name in `smm.json` will be ignored and overridden by the `ficsit-cli profile name` server option.
 > - `smm.json` will be deleted after import succeeds.
-
-It is also possible to 
 
 Available server options:
 
