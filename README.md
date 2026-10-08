@@ -1,4 +1,4 @@
-# Satisfactory for Pelican/Pterodactyl that supports mods
+# Satisfactory with Mods for Pelican/Pterodactyl
 The changes are minimal: it's still a standard `steamcmd` yolk that also uses the well-known [ficsit-cli](https://github.com/satisfactorymodding/ficsit-cli) tool to manage mods.
 
 
@@ -26,5 +26,5 @@ The changes are minimal: it's still a standard `steamcmd` yolk that also uses th
 5. You're done! On next server (re)start mods will be installed automatically.
 
 ### Custom egg
-Available [here](egg/). Tested and exported on [Pelican](https://pelican.dev/) only. May or may not require slight modification in order to work with [Pterodactyl](https://pterodactyl.io/).
+Available [here](egg/). Tested on [Pelican](https://pelican.dev/) only. May or may not require slight modification in order to work with [Pterodactyl](https://pterodactyl.io/).
 
