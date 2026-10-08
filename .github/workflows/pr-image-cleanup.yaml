@@ -1,0 +1,17 @@
+name: Delete Merged PR-Related Docker Images from Registry
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  delete-pr-image:
+    permissions:
+      packages: write
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete PR-Related Docker Image
+        uses: dataaxiom/ghcr-cleanup-action@v1
+        with:
+          delete-tags: pr-${{ github.event.pull_request.number }}
