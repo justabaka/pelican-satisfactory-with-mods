@@ -185,7 +185,7 @@ ___
 
 ### Mods
 
-This egg performs automatic mod management using [ficsit-cli](https://github.com/satisfactorymodding/ficsit-cli). By default mod management is disabled.
+This egg automates mod management, including installation, updates, and removal using [ficsit-cli](https://github.com/satisfactorymodding/ficsit-cli). By default mod management is disabled.
 
 It is possible to import a mod profile from [Satisfactory Mod Manager (SMM)](https://ficsit.app/). In order to do that you should export your mod profile using SMM, rename the resulting .smmprofile file to `smm.json` (important!) and upload it to the `Ficsit` directory via the 'Files' panel or SFTP. The import process is automatic and generally does not require any additional steps or configuration.
 
@@ -201,7 +201,7 @@ Available server options:
 
 | Name | Environmen Variable | Type | Default value | Description |
 |---------|---------|---------|---------|---------|
-| Mod management | MOD_MANAGEMENT | `boolean` | 0 (disabled) | Enables/disables mod management. When disabled, nothing is modified. It is safe to turn it on and off, all data including mod profiles is preserved. |
+| Mod management | MOD_MANAGEMENT | `boolean` | 0 (disabled) | Enables/disables mod management. When disabled, nothing is modified. When enabled, on every server restart, mods will be installed, updated, and if needed, removed according to the `profiles.json`. It is safe to turn it on and off, all data including mod profiles is preserved. |
 | Vanilla mode | VANILLA_MODE | `boolean` | 0 (disabled) | Enables/disables vanilla mode (no mods). It is safe to turn it on and off, all data is preserved. |
 | Ficsit-cli profile name | FICSIT_PROFILE_NAME | `string` | Default | Advanced option. Lets you specify a custom mod profile name defined in `profiles.json`. Safe to ignore if you don't know what it is and are not reusing the `profiles.json` from another server instance. |
 
