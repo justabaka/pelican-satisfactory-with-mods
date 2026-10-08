@@ -26,5 +26,5 @@ The changes are minimal: it's still a standard `steamcmd` yolk that also uses th
 5. You're done! On next server (re)start mods will be installed automatically.
 
 ### Custom egg
-Available [here](egg/README.md). Tested and exported on [Pelican](https://pelican.dev/) only. May or may not require slight modification in order to work with [Pterodactyl](https://pterodactyl.io/).
+Available [here](egg/). Tested and exported on [Pelican](https://pelican.dev/) only. May or may not require slight modification in order to work with [Pterodactyl](https://pterodactyl.io/).
 
